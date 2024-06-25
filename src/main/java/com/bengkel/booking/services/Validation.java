@@ -2,6 +2,10 @@ package com.bengkel.booking.services;
 
 import java.util.Scanner;
 
+import com.bengkel.booking.models.Customer;
+import com.bengkel.booking.models.MemberCustomer;
+
+
 public class Validation {
 	
 	public static String validasiInput(String question, String errorMessage, String regex) {
@@ -38,4 +42,11 @@ public class Validation {
 
 	    return result;
 	  }
+	
+	public static MemberCustomer validasiMember(Customer customer) {
+	    if(customer instanceof MemberCustomer) {
+	    	return (MemberCustomer) customer;
+	    }
+	    return null;
+	}
 }
